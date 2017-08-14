@@ -33,7 +33,7 @@ export class HomePage {
   }
 
   addListenNFC() {
-
+   
     this.nfc.addTagDiscoveredListener(nfcEvent => this.sesReadNFC(nfcEvent.tag)).subscribe(data => {
       if (data && data.tag && data.tag.id) {
         let tagId = this.nfc.bytesToHexString(data.tag.id);
